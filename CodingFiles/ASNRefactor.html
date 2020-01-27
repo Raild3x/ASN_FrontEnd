@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<link rel="icon" href="https://antisocialnorm.net/ASN_Rat.png">
 	<title>Antisocialnorm | Home</title>
+	<link rel="stylesheet" type="text/css" href="CSS/ASN_Header_Computer.css">
 	<link rel="stylesheet" type="text/css" href="CSS/ASN_HOME_COMPUTER.css">
 </head>
 <body onload="loadPage()" data-gr-c-s-loaded="true">
@@ -11,7 +12,6 @@
 		<img class="icon" src="https://antisocialnorm.net/ASN_Rat.png" alt="RAT">
 		<ul>
 			<li onclick="window.location.href = 'https://antisocialnorm.net';">HOME</li>
-			<li id="profile">Raildex</li>
 			<li>ABOUT US
 				<ul>
 					<li>Server History</li>
@@ -21,18 +21,21 @@
 			</li>
 			<li>FAQ</li>
 			<li>CONTACT US</li>
+
 			<li id="headerLogin">LOGIN</li>
+			<li id="profile">Raildex</li>
 		</ul>
 	</div>
 	
-	<div style="position:absolute; top:40px; height:100%; width:100%;">
-	<div id="serverSpecs">
-		<ul style="float:left; list-style:none;>
-		<li><div class="box" style="width:300px; height:400px;">Server Specs</div></li>
-		<li><div class="box" style="width:300px; height:400px;">Ratstation specs</div></li>
-		</ul>
+	<div style="position:absolute; top:40px; height:auto; width:100%;">
+	<div class="gridContainer">
+		<div class="box" id="CoreSpecs">Core Machine Specs</div>
+		<div class="box" id="RatStationSpecs">Ratstation specs</div>
+		<div class="box" id="ServerSpecs">Running Servers</div>
+		<div class="box" id="UpTime">GraphHere</div>
+		<div class="box" id="UpTime2">Graph2 here</div>
 	</div>
-	<img id="menuImg" src="C:\Users\Logan\Pictures\Stuff for coding\dungeon1Faded.png"; alt="main screen image";>
+	<img id="menuImg" src="Dungeon1Home.png"; alt="main screen image";>
 	</div>
 </body>
 </html>
