@@ -33,6 +33,9 @@ function LoginClicked(id){
     if (state > 0){ return; }
     //spinLogo();
     console.log("LoginClicked");
+    systemInfo();
+    networkInfo();
+    
 }
 
 function RegisterClicked(id){
@@ -59,4 +62,3 @@ function insertRegisterForms(){
 function loadPage(){
     console.log("Page Load Ran");
 }
-
