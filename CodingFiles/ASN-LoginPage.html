@@ -1,10 +1,10 @@
 <html>
 <head>
-	<script type="text/javascript" src="Javascript/HomePage.js"></script>
+	<script type="text/javascript" src="Javascript/LoginPage.js"></script>
 	<meta charset="utf-8">
 	<title>Antisocialnorm | Login</title>
-	<link rel="stylesheet" type="text/css" href="CSS/ASN_Header_Computer.css">
-	<link rel="stylesheet" type="text/css" href="CSS/ASN-Login-Computer.css">
+	<link rel="stylesheet" type="text/css" href="CSS/Header-Computer.css">
+	<link rel="stylesheet" type="text/css" href="CSS/Login-Computer.css">
 </head>
 <body onload="loadPage()" data-gr-c-s-loaded="true">
 	<script type="text/javascript" src="Javascript/HeaderBar.js"></script>
@@ -18,11 +18,12 @@
 			<label for="username" class="form-label">Username / Email</label>
 		</div>
 		<div class="form-group">
-			<input type="input" class="form-field" placeholder="username" name="username" id='username' required />
-			<label for="username" class="form-label">Password</label>
+			<input type="input" class="form-field" placeholder="password" name="password" id='password' required />
+			<label for="password" class="form-label">Password</label>
 		</div>
-		<button type="submit" class="form-button" style="background-color:  rgb(88, 39, 99);">Login</button>
-		<button type="submit" class="form-button" style="background-color:  rgb(88, 39, 99);">Register</button>
+		<div id="registerSpot"></div>
+		<button type="submit" class="form-button" id="loginButton" onclick="LoginClicked(this)" style="background-color:  rgb(88, 39, 99);">Login</button>
+		<button type="submit" class="form-button" id="registerButton" onclick="RegisterClicked(this)" style="background-color:  rgb(88, 39, 99);">Register</button>
 	</div>
 	
 </body>

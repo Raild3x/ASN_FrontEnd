@@ -41,6 +41,6 @@ async function DisplayStats(){
 }
 
 //DisplayStats();
-function onLoad(){
+function loadPage(){
 	console.log("Page Loaded");
 }

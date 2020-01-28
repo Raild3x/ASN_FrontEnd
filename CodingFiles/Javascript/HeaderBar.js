@@ -43,3 +43,5 @@ document.write( '			<a class=\"navbar-item\"'+dict.Login+' style=\"float:right;r
 document.write( '			<a class=\"navbar-item\"'+dict.Profile+' style=\"float:right;right:50px;position:relative;\" href=\"\">UserProfile</a>\n' );
 document.write( '		</div>\n' );
 document.write( '	</div>' );
+
+
