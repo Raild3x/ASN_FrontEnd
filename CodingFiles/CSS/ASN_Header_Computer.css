@@ -1,6 +1,6 @@
 body {
 	overflow-x:hidden;
-	background-color:#222244;
+	background-color:#2f3441;
 	background-image: url("../white-brick-wall-seamless.jpg");
 	background-blend-mode: multiply;
 	background-repeat: repeat;
@@ -14,9 +14,9 @@ body {
 	font-family: "Times New Roman", Times, serif;
 }
 .icon{
-	padding: 5px 5px;
-	height:40px;
-	width:40px;
+	padding: 2px 2px;
+	height:46px;
+	width:46px;
 	left:0;
 	top:0;
 	position:fixed;

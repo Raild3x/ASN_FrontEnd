@@ -18,8 +18,11 @@ for (var key in dict) {
     }
 }
 
+//https://antisocialnorm.net/ASN_Rat.png
+
+document.write( '<link rel="icon" href="NewASNLogo.png">');
 document.write( '<div class=\"header\">\n' );
-document.write( '		<img class=\"icon\" src=\"https://antisocialnorm.net/ASN_Rat.png\" alt=\"RAT\">\n' );
+document.write( '		<img class=\"icon\" src=\"NewASNLogo.png\" alt=\"RAT\">\n' );
 document.write( '		<div class=\"navbar\">\n' );
 document.write( '			<a class=\"navbar-item\"'+dict.Home+' href=\"ASN-HomePage.html\">HOME</a>\n' );
 document.write( '			<a class=\"navbar-item\"'+dict.FAQ+' href=\"\">FAQ</a>\n' );
