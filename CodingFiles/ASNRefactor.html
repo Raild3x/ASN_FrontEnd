@@ -10,21 +10,25 @@
 <body onload="loadPage()" data-gr-c-s-loaded="true">
 	<div class="header">
 		<img class="icon" src="https://antisocialnorm.net/ASN_Rat.png" alt="RAT">
-		<ul>
-			<li onclick="window.location.href = 'https://antisocialnorm.net';">HOME</li>
-			<li>ABOUT US
-				<ul>
-					<li>Server History</li>
-					<li>Logan</li>
-					<li>Michael</li>
-				</ul>
-			</li>
-			<li>FAQ</li>
-			<li>CONTACT US</li>
+		<div class="navbar">
+			<a class="navbar-item" href="window.location.href = 'https://antisocialnorm.net';">HOME</a>
+			<a class="navbar-item" href="">FAQ</a>
+			<div class="navbar-dropdown">
+				<a class="navbar-item">ABOUT US</a>
+				<div>
+					<div>
+						<a>Server History</a>
+						<a>Logan</a>
+						<a>Michael</a>
+					</div>
+				</div>
+			</div>
+			<a class="navbar-item" href="">CONTACT US</a>
 
-			<li id="headerLogin">LOGIN</li>
-			<li id="profile">Raildex</li>
-		</ul>
+			<a class="navbar-item-right" href="">LOGIN</a>
+			<a class="navbar-item-right" href="">UserProfile</a>
+		</div>
+
 	</div>
 	
 	<div style="position:absolute; top:40px; height:auto; width:100%;">

@@ -37,7 +37,70 @@ body {
 	z-index:10;
 	box-shadow: 0px 1px 20px black;
 }
-.header ul{
+.navbar{
+    left: 40;
+	position: relative;
+}
+.navbar-item {
+    z-index: 2;
+    font-family: "Verdana";
+    text-decoration: none;
+	text-align:center;
+	background-color:#555555;
+    float:left;
+    line-height: 40px;
+	padding:0px 20px;
+}
+.navbar a{
+    transition: background-color .25s;
+    -moz-transition: background-color .25s ease-in-out;
+    -webkit-transition: background-color .25s ease-in-out;
+}
+.navbar a:hover{
+	background-color:#444444;
+}
+.navbar-dropdown{
+    float: left;
+    position: relative;
+}
+.navbar-dropdown div{
+    box-shadow: 0px 8px 20px 0px rgba(0,0,0,0.3);
+    background-color:#838383;
+    min-width: 100%;
+    z-index: 1;
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+.navbar-dropdown div a{
+    padding: 12px 12px;
+    display: block;
+    float: none;
+}
+.navbar-dropdown:hover div {
+    display: block;
+}
+
+.navbar-item-right {
+    z-index: 2;
+    font-family: "Verdana";
+    text-decoration: none;
+	text-align:center;
+	background-color:#555555;
+    float:right;
+    right:40px;
+	position:relative;
+    line-height: 40px;
+	padding:0px 20px;
+}
+
+#headerLogin, #profile {
+	float:right;
+	right:40px;
+	position:relative;
+}
+
+/*.header ul{
 	list-style:none;
 	left:40;
 	position:relative;
@@ -68,4 +131,4 @@ body {
 }
 .header ul li:hover > ul{
 	display:block;
-}
+}*/
