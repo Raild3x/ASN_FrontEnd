@@ -33,8 +33,9 @@ function LoginClicked(id){
     if (state > 0){ return; }
     //spinLogo();
     console.log("LoginClicked");
-    systemInfo();
-    networkInfo();
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    console.log("Username: "+username+"\tPassword: "+password);
     
 }
 
