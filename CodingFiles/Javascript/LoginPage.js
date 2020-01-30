@@ -1,50 +1,75 @@
-var state = 0 //0 = logging in, 1 = registering, 2 = performing process
+
 var formWindow = document.getElementById("loginWindow");
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
+
 var angle = 0;
 var spin = false
 function spinLogo(){
     spin = true;
     var speed = 0.2;
     var beginSlowdown = false;
+    var reachedSpeed = false;
     var loop = setInterval(() => {
-        if (!spin){
-            if (angle%360 < 110 && angle%360 > 109){
+        if (!spin && reachedSpeed){
+            if (angle%360 < 111 && angle%360 > 110){
                 beginSlowdown = true;
             }
             if (beginSlowdown){
                 speed = speed > 0 ? speed - .002 : 0.002;
                 if (speed <= 0){
                     clearInterval(loop);
+                    angle = 0;
+                    return;
                 }
             }
         }else{
             speed = speed < 1 ? speed + .002 : 1
+            if (speed == 1){ reachedSpeed = true;}
         }
         angle += speed;
-        document.getElementById('icon').style = 'transform: rotate(' + angle + 'deg)';
+        document.getElementById('icon').style = 'transform: rotate(' + angle + 'deg);';
     }, 1);
 }
 
 function LoginClicked(id){
-    if (state > 0){ return; }
-    //spinLogo();
-    console.log("LoginClicked");
+    if (angle != 0){ return; }
+    spinLogo();
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
-    console.log("Username: "+username+"\tPassword: "+password);
+
+    var validInputs = false;
+    if(username == "" || password == ""){
+        const xhttp = new XMLHttpRequest();
+        xhttp.open("POST","../PHP/profile-manager.php",true);
+        //xhttp.setRequestHeader
+        xhttp.send(username,password);
+        xhttp.onreadystatechange = function(){
+            if(this.readyState == 4 && status == 200){
+                validInputs = true;
+            }
+        }
+    }
     
+
+    const warning = document.getElementById("warning");
+    if (!validInputs){
+        warning.style.display = "inline-block";
+    }else{
+        warning.style.display = "none";
+    }
+    
+    spin = false;
 }
 
 function RegisterClicked(id){
-    if (state == 2){ return; }
-    //spin = false;
-    state = 2
+    if (angle != 0){ return; }
+    spinLogo();
     const login = document.getElementById("loginButton");
-    state = 1
+
+    spin = false;
 }
 
 
@@ -52,13 +77,6 @@ function compileRegisterData(){
 
 }
 
-function compileLoginData(){
-
-}
-
-function insertRegisterForms(){
-    
-}
 
 function loadPage(){
     console.log("Page Load Ran");

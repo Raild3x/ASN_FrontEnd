@@ -1,2 +1,2 @@
 # ASN_FrontEnd
-html, css, and js for front end of website
+If you're reading this, may god help you understand this better than I did while writing it.
